@@ -8,6 +8,13 @@ const AGE_GROUPS = [
     { name: "Grade R",    fromMonths: 60, toMonths: 71, fee: 600 },
 ];
 
+const DOCUMENTS = [
+    "Child's birth certificate (copy)",
+    "Clinic card (Road to Health booklet)",
+    "Parent or guardian ID (copy)",
+    "Proof of address",
+];
+
 function ageInMonths(birth, onDate) {
     let months = (onDate.getFullYear() - birth.getFullYear()) * 12;
     months += onDate.getMonth() - birth.getMonth();
@@ -36,5 +43,5 @@ function ageGroupFor(birth, onDate, groups) {
 }
 
 if (typeof module !== "undefined") {
-    module.exports = { START_2027, AGE_GROUPS, ageInMonths, ageGroupFor };
+    module.exports = { START_2027, AGE_GROUPS, DOCUMENTS, ageInMonths, ageGroupFor };
 }
